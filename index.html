@@ -21,80 +21,39 @@
             5) And a button for submitting the form with "Signup" as text inside.
          -->
     <!-- header -->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Authentication page</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-light  ">
+        <div class="container-fluid ">
+            <a class="navbar-brand fs-1" href="./index.html">Authentication page</a>
         </div>
     </nav>
-    <div class="container-sm">
 
-
-        <form onsubmit="abc()">
+    <div class="w-50  p-3 border border-info   position-absolute top-50 start-50 translate-middle">
+        <form onsubmit="validate();return false" action="#">
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="UserName" />
-                <label for="floatingInput">User name</label>
-                <p id="validateExampleInput"></p>
+                <input type="text" class="form-control" id="floatingInputName" placeholder="UserName" />
+                <label for="floatingInputName">User name</label>
+                <p id="validateInput"></p>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-                <p id="validateExampleEmail"></p>
+                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <label for="floatingInputEmail">Email address</label>
+                <p id="validateEmail"></p>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" onkeypress="passwordCheck()" id="floatingPassword"
+                    placeholder="Password">
                 <label for="floatingPassword">Password</label>
-                <p id="validateExamplePassword"></p>
+                <p id="validatePassword"></p>
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"> Agree to terms and conditions</label>
-                <p id="validateExampleConsent"> </p>
+                <input type="checkbox" class="form-check-input" id="exampleCheck">
+                <label class="form-check-label" for="exampleCheck"> Agree to terms and conditions</label>
+                <p id="validateConsent"> </p>
             </div>
             <input type="submit" value="Sign up" class="btn btn-primary" />
-
         </form>
-
-
-
-
     </div>
     <script src="index.js" async defer></script>
 </body>
